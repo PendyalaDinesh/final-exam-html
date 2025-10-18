@@ -5,16 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Resource Gallery</title>
   <meta name="description" content="Explore Oklahoma City University’s Student Resource Gallery showcasing student projects, workshops, and campus experiences." />
+
+  <!-- ✅ Preload fonts and styles faster -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- ✅ Improve perceived performance -->
+  <link rel="icon" href="assets/icon.png" />
 </head>
 <body>
   <header class="site-header">
     <div class="container">
       <h1>Student Resource Gallery</h1>
-      <nav>
+      <nav aria-label="Main navigation">
         <ul class="nav">
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="form.html">Password </a></li>
+          <li><a href="form.html">Password</a></li>
           <li><a href="map.html">Map</a></li>
           <li><a href="#accessibility">Accessibility</a></li>
         </ul>
@@ -28,15 +35,16 @@
       <h2>Explore Campus Life</h2>
       <div class="hero-grid">
         <figure>
-          <img src="assets/library.jpg" alt="Library" />
+          <!-- ✅ Added width, height, and lazy loading -->
+          <img src="assets/library.jpg" alt="Library at Oklahoma City University" width="350" height="250" loading="lazy" />
           <figcaption>Library</figcaption>
         </figure>
         <figure>
-          <img src="assets/project.jpg" alt="Group Project Discussion" />
+          <img src="assets/project.jpg" alt="Group Project Discussion among students" width="350" height="250" loading="lazy" />
           <figcaption>Group Project</figcaption>
         </figure>
         <figure>
-          <img src="assets/workshop.jpg" alt="Workshop Session" />
+          <img src="assets/workshop.jpg" alt="Workshop Session with students" width="350" height="250" loading="lazy" />
           <figcaption>Workshop Session</figcaption>
         </figure>
       </div>
