@@ -10,12 +10,17 @@
 /* ----------------------------
    GLOBAL STYLES
 ----------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #222;
   background-color: #f8f9fa;
   line-height: 1.6;
-  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .container {
@@ -31,7 +36,12 @@ body {
   background-color: #004080;
   color: #fff;
   padding: 1rem 0;
+  text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  will-change: transform;
 }
 
 .site-header h1 {
@@ -53,12 +63,13 @@ body {
   font-weight: 500;
   padding: 0.3rem 0.8rem;
   border-radius: 5px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .nav a:hover,
 .nav a.active {
   background-color: #0059b3;
+  transform: scale(1.05);
 }
 
 /* ----------------------------
@@ -83,13 +94,14 @@ body {
 }
 
 .hero-grid figure {
-  background: white;
+  background: #fff;
   border-radius: 10px;
   padding: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
   max-width: 350px;
+  aspect-ratio: 7 / 5;
 }
 
 .hero-grid figure:hover {
@@ -102,6 +114,7 @@ body {
   height: auto;
   border-radius: 8px;
   display: block;
+  object-fit: cover;
 }
 
 .hero-grid figcaption {
@@ -114,7 +127,7 @@ body {
    INTRO SECTION
 ----------------------------- */
 .intro {
-  background: white;
+  background: #fff;
   border-radius: 10px;
   padding: 2rem;
   margin: 2rem 0;
@@ -126,6 +139,13 @@ body {
   color: #004080;
   margin-bottom: 1rem;
   font-size: 1.6rem;
+}
+
+.intro p {
+  font-size: 1rem;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* ----------------------------
@@ -154,5 +174,9 @@ body {
 
   .intro {
     padding: 1.5rem;
+  }
+
+  .site-header h1 {
+    font-size: 1.5rem;
   }
 }
