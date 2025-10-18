@@ -13,6 +13,7 @@ body {
   line-height: 1.6;
 }
 
+/* Limit container width for better layout on large screens */
 .container {
   width: 90%;
   max-width: 1100px;
@@ -34,6 +35,7 @@ body {
 .nav {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -43,7 +45,7 @@ body {
   font-weight: 500;
   padding: 0.3rem 0.8rem;
   border-radius: 5px;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
 .nav a:hover,
@@ -74,15 +76,17 @@ body {
   border-radius: 10px;
   padding: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-grid figure:hover {
   transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 .hero-grid img {
   width: 100%;
+  height: auto;
   border-radius: 8px;
 }
 
@@ -114,8 +118,5 @@ body {
   text-align: center;
   padding: 1rem 0;
   margin-top: 3rem;
-}
-
-.site-footer p {
   font-size: 0.9rem;
 }
