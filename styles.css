@@ -1,30 +1,37 @@
-/* Reset */
+/* ----------------------------
+   RESET
+----------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Global */
+/* ----------------------------
+   GLOBAL STYLES
+----------------------------- */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #222;
   background-color: #f8f9fa;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
-/* Limit container width for better layout on large screens */
 .container {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* Header */
+/* ----------------------------
+   HEADER
+----------------------------- */
 .site-header {
   background-color: #004080;
   color: #fff;
   padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .site-header h1 {
@@ -37,6 +44,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
 }
 
 .nav a {
@@ -53,15 +61,18 @@ body {
   background-color: #0059b3;
 }
 
-/* Hero Section */
+/* ----------------------------
+   HERO SECTION
+----------------------------- */
 .hero {
   text-align: center;
-  padding: 2rem 0;
+  padding: 2.5rem 0;
 }
 
 .hero h2 {
   color: #004080;
   margin-bottom: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .hero-grid {
@@ -77,17 +88,20 @@ body {
   padding: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 350px;
 }
 
 .hero-grid figure:hover {
   transform: scale(1.03);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .hero-grid img {
   width: 100%;
   height: auto;
   border-radius: 8px;
+  display: block;
 }
 
 .hero-grid figcaption {
@@ -96,7 +110,9 @@ body {
   color: #004080;
 }
 
-/* Intro Section */
+/* ----------------------------
+   INTRO SECTION
+----------------------------- */
 .intro {
   background: white;
   border-radius: 10px;
@@ -109,9 +125,12 @@ body {
 .intro h2 {
   color: #004080;
   margin-bottom: 1rem;
+  font-size: 1.6rem;
 }
 
-/* Footer */
+/* ----------------------------
+   FOOTER
+----------------------------- */
 .site-footer {
   background-color: #00264d;
   color: #fff;
@@ -119,4 +138,21 @@ body {
   padding: 1rem 0;
   margin-top: 3rem;
   font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* ----------------------------
+   RESPONSIVE DESIGN
+----------------------------- */
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+
+  .intro {
+    padding: 1.5rem;
+  }
 }
