@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Password & Address Form</title>
+  <link rel="stylesheet" href="form.css" />
+</head>
+<body>
+  <main class="form-wrapper">
+    <h2>Password Validation Form</h2>
+
+    <form id="pwForm" novalidate>
+      <!-- Current Password -->
+      <div class="form-group">
+        <label for="current">Current Password</label>
+        <input id="current" name="current" type="password" placeholder="Enter current password" required>
+        <small id="err-current" class="error-text"></small>
+      </div>
+
+      <!-- New Password -->
+      <div class="form-group">
+        <label for="newpw">New Password</label>
+        <input id="newpw" name="newpw" type="password" placeholder="Enter new password" required>
+        <small id="err-new" class="error-text"></small>
+        <ul class="hint">
+          <li>Minimum 9 characters</li>
+          <li>Exactly 2 uppercase letters</li>
+          <li>At least 1 special character (!@#$%)</li>
+        </ul>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-group">
+        <label for="confirm">Confirm Password</label>
+        <input id="confirm" name="confirm" type="password" placeholder="Confirm new password" required>
+        <small id="err-confirm" class="error-text"></small>
+      </div>
+
+      <!-- Buttons -->
+      <div class="button-group">
+        <button type="submit" class="btn">Submit</button>
+        <button type="button" id="showAddressBtn" class="btn secondary">Change Address</button>
+        <button type="button" class="btn back-btn" onclick="goBack()">← Back</button>
+      </div>
+
+      <div id="message" class="message" role="status" aria-live="polite"></div>
+    </form>
+
+    <!-- Hidden Address Form -->
+    <form id="addrForm" class="hidden" novalidate>
+      <h3>Change Address</h3>
+
+      <div class="form-group">
+        <label for="street">Street</label>
+        <input id="street" name="street" type="text" placeholder="Enter street" required>
+        <small id="err-street" class="error-text"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="city">City</label>
+        <input id="city" name="city" type="text" placeholder="Enter city" required>
+        <small id="err-city" class="error-text"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="zip">ZIP Code</label>
+        <input id="zip" name="zip" type="text" placeholder="Enter ZIP code" required pattern="\\d{5}">
+        <small id="err-zip" class="error-text"></small>
+      </div>
+
+      <div class="button-group">
+        <button type="submit" class="btn">Submit</button>
+        <button type="button" class="btn back-btn" onclick="hideAddressForm()">← Back</button>
+      </div>
+
+      <div id="addr-message" class="message" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <script src="form.js"></script>
+</body>
+</html>
