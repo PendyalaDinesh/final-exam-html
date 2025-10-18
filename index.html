@@ -6,15 +6,18 @@
   <title>Student Resource Gallery</title>
   <meta name="description" content="Explore Oklahoma City University’s Student Resource Gallery showcasing student projects, workshops, and campus experiences." />
 
-  <!-- ✅ Preload fonts and styles faster -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- ✅ Link stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- ✅ Improve perceived performance -->
+  <!-- ✅ Favicon (optional, prevents warning) -->
   <link rel="icon" href="assets/icon.png" />
+
+  <!-- ✅ Preload main image (improves LCP) -->
+  <link rel="preload" as="image" href="assets/library.webp" />
 </head>
+
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container">
       <h1>Student Resource Gallery</h1>
@@ -29,22 +32,25 @@
     </div>
   </header>
 
+  <!-- Main Content -->
   <main class="container">
     <!-- Hero Section -->
     <section class="hero">
       <h2>Explore Campus Life</h2>
       <div class="hero-grid">
+        <!-- ✅ First image NOT lazy for better LCP -->
         <figure>
-          <!-- ✅ Added width, height, and lazy loading -->
-          <img src="assets/library.jpg" alt="Library at Oklahoma City University" width="350" height="250" loading="lazy" />
+          <img src="assets/library.webp" alt="Library at Oklahoma City University" width="350" height="250" />
           <figcaption>Library</figcaption>
         </figure>
+
         <figure>
-          <img src="assets/project.jpg" alt="Group Project Discussion among students" width="350" height="250" loading="lazy" />
+          <img src="assets/project.webp" alt="Group Project Discussion among students" width="350" height="250" loading="lazy" />
           <figcaption>Group Project</figcaption>
         </figure>
+
         <figure>
-          <img src="assets/workshop.jpg" alt="Workshop Session with students" width="350" height="250" loading="lazy" />
+          <img src="assets/workshop.webp" alt="Workshop Session with students" width="350" height="250" loading="lazy" />
           <figcaption>Workshop Session</figcaption>
         </figure>
       </div>
@@ -60,6 +66,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer" id="accessibility">
     <div class="container">
       <p>© 2025 Oklahoma City University — Student Resource Gallery — Accessibility Ready</p>
