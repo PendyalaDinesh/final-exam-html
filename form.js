@@ -91,7 +91,7 @@ addrForm.addEventListener('submit', e => {
 
   if (hasError) return;
 
-  addrMsg.textContent = '✅ Address updated successfully (demo).';
+  addrMsg.textContent = '✅ Address updated successfully.';
   addrMsg.classList.add('success');
   addrForm.reset();
 });
