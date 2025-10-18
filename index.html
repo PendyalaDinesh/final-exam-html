@@ -5,19 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Resource Gallery</title>
   <meta name="description" content="Explore Oklahoma City University’s Student Resource Gallery showcasing student projects, workshops, and campus experiences." />
+  <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable" />
 
-  <!-- ✅ Link stylesheet -->
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- ✅ Favicon (optional, prevents warning) -->
+  <!-- Preconnect & Preload -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="stylesheet" href="styles.css" media="all" />
   <link rel="icon" href="assets/icon.png" />
-
-  <!-- ✅ Preload main image (improves LCP) -->
   <link rel="preload" as="image" href="assets/library.webp" />
 </head>
 
 <body>
-  <!-- Header -->
   <header class="site-header">
     <div class="container">
       <h1>Student Resource Gallery</h1>
@@ -32,13 +30,10 @@
     </div>
   </header>
 
-  <!-- Main Content -->
   <main class="container">
-    <!-- Hero Section -->
     <section class="hero">
       <h2>Explore Campus Life</h2>
       <div class="hero-grid">
-        <!-- ✅ First image NOT lazy for better LCP -->
         <figure>
           <img src="assets/library.webp" alt="Library at Oklahoma City University" width="350" height="250" />
           <figcaption>Library</figcaption>
@@ -56,7 +51,6 @@
       </div>
     </section>
 
-    <!-- Description Section -->
     <section class="intro">
       <h2>Welcome to the Student Resource Gallery</h2>
       <p>
@@ -66,7 +60,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer" id="accessibility">
     <div class="container">
       <p>© 2025 Oklahoma City University — Student Resource Gallery — Accessibility Ready</p>
